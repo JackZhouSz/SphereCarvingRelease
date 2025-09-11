@@ -13,6 +13,8 @@ namespace sdf {
 																"CAD 2",
 																"Teapot"};
 
+	static const std::array<int, 7> shape_sc_iterations_list = { 6, 5, 8, 17, 8, 12, 12 };
+
 	float d_sphere(const glm::vec3& p, const float& r);
 	float d_box(const glm::vec3& p, const glm::vec3& size);
 	float d_cylinder(const glm::vec3& p, float h, float r);

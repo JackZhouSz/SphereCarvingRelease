@@ -70,6 +70,17 @@ void Window::GUI() {
 				LoadCarvedData();
 				LoadBoundData();
 			}
+			ImGui::SameLine();
+			if (ImGui::Button("Complete Carving")) {
+				ResetSphereCarving();
+
+				for (int i = 0; i < sdf::shape_sc_iterations_list[(int)m_sdf_shape]; i++) {
+					m_sc.Iterate();
+				}
+
+				LoadCarvedData();
+				LoadBoundData();
+			}
 		}
 	}
 	ImGui::End();
